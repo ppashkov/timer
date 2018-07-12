@@ -7,7 +7,6 @@ reset();
 });
 var counter = 0;
 var countermin = 0;
-
 var bool = false;
 var id = setInterval("timer()", 1000);
 function timer(){
@@ -23,7 +22,6 @@ function timer(){
         document.getElementById("min").innerHTML = countermin;
     }; 
     document.getElementById("sec").innerHTML = counter;
-    document.getElementById("ms").innerHTML = ms;
 };
 $("#reset").click(function(){
     reset();
