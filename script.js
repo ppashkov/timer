@@ -40,11 +40,13 @@ $("#pause").click(function(){
 });
 function pause(){
     if(bool == false){
+        $("#pause").html("Пуск (P)")
         var tempsec = counter;
         var tempmin = countermin;    
         clearInterval(id);
         bool = true;
     } else{
+        $("#pause").html("Пауза (P)")
         id = setInterval("timer()", 1000);
         bool = false;  
     }
