@@ -18,8 +18,8 @@ main .timerbox {
   background-color: #606060;
   -webkit-box-shadow: 2px 2px 10px black;
           box-shadow: 2px 2px 10px black;
-  font-size: 30px;
-  font-family: sans-serif;
+  font-size: 35px;
+  font-family: 'PT Mono', monospace;
   color: white;
   text-align: center;
   display: -webkit-box;
@@ -31,11 +31,6 @@ main .timerbox {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main .timerbox pre {
-  margin-top: 20px;
-  font-size: 20px;
 }
 
 main .timerbox button {

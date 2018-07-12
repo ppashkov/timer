@@ -5,8 +5,8 @@ pause()
 reset();
 }
 });
-var counter = 0;
-var countermin = 0;
+var counter = 57;
+var countermin = 8;
 var bool = false;
 var id = setInterval("timer()", 1000);
 function timer(){
@@ -19,9 +19,18 @@ function timer(){
             counter = 0;
             countermin = 0;
         }    
-        document.getElementById("min").innerHTML = countermin;
+        if (countermin < 10){
+            document.getElementById("min").innerHTML = "0" + countermin;
+        } else{
+            document.getElementById("min").innerHTML = countermin;
+        }
     }; 
-    document.getElementById("sec").innerHTML = counter;
+    if(counter < 10){
+        document.getElementById("sec").innerHTML = "0" + counter;
+    } else{
+        document.getElementById("sec").innerHTML =  counter;
+    }
+    
 };
 $("#reset").click(function(){
     reset();
@@ -43,6 +52,6 @@ function pause(){
 function reset(){
     counter = 0;
     countermin = 0;
-    document.getElementById("sec").innerHTML = counter;
-    document.getElementById("min").innerHTML = countermin;
+    document.getElementById("sec").innerHTML = "0" + counter;
+    document.getElementById("min").innerHTML = "0" + countermin;
 }
