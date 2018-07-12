@@ -5,8 +5,8 @@ pause()
 reset();
 }
 });
-var counter = 57;
-var countermin = 8;
+var counter = 0;
+var countermin = 0;
 var bool = false;
 var id = setInterval("timer()", 1000);
 function timer(){
