@@ -7,16 +7,11 @@ reset();
 });
 var counter = 0;
 var countermin = 0;
-var ms = 0;
+
 var bool = false;
-var id = setInterval("timer()", 10);
+var id = setInterval("timer()", 1000);
 function timer(){
-    ms+=10/10;
-   if(ms == 100){
-       counter++;
-       ms = 0;
-       document.getElementById("ms").innerHTML = ms;
-   }
+    counter++;
     if(counter == 60){
         countermin++;
         document.getElementById("min").innerHTML = countermin;
@@ -38,21 +33,18 @@ $("#pause").click(function(){
 });
 function pause(){
     if(bool == false){
-        var tempms = ms;
         var tempsec = counter;
         var tempmin = countermin;    
         clearInterval(id);
         bool = true;
     } else{
-        id = setInterval("timer()", 10);
+        id = setInterval("timer()", 1000);
         bool = false;  
     }
 }
 function reset(){
     counter = 0;
     countermin = 0;
-    ms = 0;
     document.getElementById("sec").innerHTML = counter;
     document.getElementById("min").innerHTML = countermin;
-    document.getElementById("ms").innerHTML = ms;
 }
