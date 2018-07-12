@@ -11,10 +11,6 @@ main {
   vertical-align: middle;
 }
 
-main .timer {
-  width: 100%;
-}
-
 main .timerbox {
   margin: auto;
   width: 70%;
